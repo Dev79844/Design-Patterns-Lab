@@ -47,7 +47,12 @@ class ColorStore{
         colorMap.put("black", new blackColor());
     }
     public static Color getColor(String colorname){
-        return (Color) colorMap.get(colorname).clone();
+        try {
+            return (Color) colorMap.get(colorname).clone();
+        } catch (CloneNotSupportedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 }
 
