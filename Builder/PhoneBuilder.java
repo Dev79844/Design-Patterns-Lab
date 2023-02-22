@@ -31,5 +31,4 @@ public class PhoneBuilder {
     public Phone getPhone(){
         return new Phone(this.os, this.processor, this.ram, this.battery, this.screensize);
     }
-
 }
