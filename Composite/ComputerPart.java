@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-interface Component // For Both Of Leaf And Composite Element
+interface Component 
 {
     void showPrice();
 }
@@ -24,9 +24,7 @@ class Composite implements Component {
     String Name;
     List<Component> components = new ArrayList<>();
 
-    // Constructor
     public Composite(String Name) {
-        // super(); // Why????
         this.Name = Name;
     }
 
@@ -39,9 +37,7 @@ class Composite implements Component {
     public void showPrice() {
         System.out.println("---------------" + Name + "---------------");
         for (Component c : components) {
-            c.showPrice(); // Will Print The Price Of Each Object
-                           // If It Is Leaf Object Directly The Price Will Be Printed
-                           // If It Is A Composite Object The It Will Further Traverse Into It
+            c.showPrice();
         }
     }
 }
